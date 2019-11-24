@@ -1,0 +1,114 @@
+{
+  "settings": {
+    "currentPage": "index.html",
+    "theme": {
+      "name": "organicamp",
+      "title": "OrganicAMP",
+      "styling": {
+        "primaryColor": "#aad236",
+        "secondaryColor": "#DDD78D",
+        "successColor": "#AAD236",
+        "infoColor": "#5ACDA6",
+        "warningColor": "#8b8b99",
+        "dangerColor": "#f69dad",
+        "mainFont": "Poppins",
+        "display1Font": "Poppins",
+        "display1Size": "2.75",
+        "display2Font": "Poppins",
+        "display2Size": 1.5,
+        "display5Font": "Caveat",
+        "display5Size": 1.5,
+        "display6Font": "Poppins",
+        "display6Size": 1,
+        "display7Font": "Poppins",
+        "display7Size": 0.875,
+        "display4Font": "Poppins",
+        "display4Size": 0.75,
+        "isRoundedButtons": true,
+        "isScrollToTopButton": true,
+        "arrowColor": "#91AC41"
+      },
+      "titlePreset": "How we work",
+      "nameSelectPreset": "How we work",
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "name": "Site-11-24_2355",
+    "versionFirst": "4.11.4",
+    "siteFonts": [],
+    "uniqCompNum": 2,
+    "versionPublish": "4.11.4",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".list-item:hover": {
+              ".card-img": {
+                "transform": "scale(1.1, 1.1)"
+              }
+            },
+            "& when not (@showTitle)": {
+              ".mbr-section-subtitle": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".content": {
+              "max-width": "15.625rem"
+            },
+            "h4.item-title, p.item-text": {
+              "margin-bottom": "1.5rem"
+            },
+            ".card-img": {
+              "margin-bottom": "25px",
+              "border-radius": "100%",
+              "display": "flex",
+              "background-color": "@iconsBg",
+              "width": "calc(5rem ~\"+ @{iconsSize}rem\")",
+              "height": "calc(5rem ~\"+ @{iconsSize}rem\")",
+              "font-size": "~\"@{iconsSize}rem\"",
+              "transition": "all .3s",
+              "color": "@iconsColor"
+            },
+            ".mbr-section-title ": {
+              "color": "#bbd966"
+            },
+            ".main-text": {
+              "color": "#000000"
+            }
+          },
+          "_name": "features8",
+          "_customHTML": "<section class=\"features8\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"0\" step=\"1\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"range\" inline title=\"Items Count\" name=\"itemsCount\" min=\"1\" max=\"4\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n        <input type=\"range\" inline title=\"Icons Size\" name=\"iconsSize\" min=\"2\" max=\"6\" step=\"0.25\" value=\"2\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#000000\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons BG Color\" name=\"iconsBg\" value=\"#b95556\" condition=\"showIcons\">\n        <input type=\"checkbox\" title=\"Show Item Title\" name=\"showItemTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Item Text\" name=\"showItemText\" checked>\n\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/mbr-1920x1920.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#f7eee2\">\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#f6efe9\" condition=\"bg.type!='color' && overlay\">\n        <input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0\" condition=\"bg.type!='color' && overlay\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row main-row\">\n            <div class=\"text-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12\">\n                <div class=\"text-wrap\">\n                    <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\"></h4>\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-black mbr-bold align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title \">\n                        \n                    <div><br></div><div><br></div><br><div><br></div><div>\n</div><div><br></div></h3>\n                    <p class=\"mbr-fonts-style general-text align-center mbr-text main-text mbr-semibold\" mbr-theme-style=\"display-2\" mbr-if=\"showText\" data-app-selector=\".main-text\"><br><b>&nbsp;מעיין דנטס יועצת תזונה ובריאות אינטגרטיבית&nbsp;</b><br><b><i>\"בריאות היא מצב של רווחה גופנית</i><i>, </i><i>נפשית וחברתית מושלמת\"</i></b><br><a href=\"https://api.whatsapp.com/send?phone=972525900355\" class=\"text-black\"><i><b><br></b></i></a><br><a href=\"https://api.whatsapp.com/send?phone=972525900355\" class=\"text-black\"><i><b>WhatsApp</b></i></a><br><br></p>\n                    <div mbr-list mbr-list-grow=\"itemsCount\" class=\"list-wrap d-flex\">\n\n                        <div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center\" mbr-class=\"{'mbr-col-md-6 mbr-col-lg-12':itemsCount==1,\n                             'mbr-col-md-6 mbr-col-lg-6':itemsCount==2,\n                             'mbr-col-md-6 mbr-col-lg-4':itemsCount==3,\n                             'mbr-col-md-6 mbr-col-lg-3':itemsCount==4}\">\n                            <div class=\"card-img mbr-justify-content-center mbr-align-items-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <a href=\"https://mbenshushan.wixsite.com/maayanateva\"><span mbr-icon class=\"mbr-iconfont mobi-mbri-sites mobi-mbri\"></span></a>\n                                </div>\n                            </div>\n                            <div class=\"content\">\n                                <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-2\">אתר שלנו</h4> \n                                <p class=\"item-text align-center mbr-text mbr-semibold mbr-fonts-style \" mbr-theme-style=\"display-6\" mbr-if=\"showItemText\" data-app-selector=\".item-text\"></p>\n                            </div>\n                        </div>   \n                    \n                        \n                        \n                    <div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center\" mbr-class=\"{'mbr-col-md-6 mbr-col-lg-12':itemsCount==1,\n                             'mbr-col-md-6 mbr-col-lg-6':itemsCount==2,\n                             'mbr-col-md-6 mbr-col-lg-4':itemsCount==3,\n                             'mbr-col-md-6 mbr-col-lg-3':itemsCount==4}\">\n                            <div class=\"card-img mbr-justify-content-center mbr-align-items-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <a href=\"tel:0525900355\"><span mbr-icon class=\"mbr-iconfont mbri-mobile2\"></span></a>\n                                </div>\n                            </div>\n                            <div class=\"content\">\n                                <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-2\">טלפון</h4> \n                                <p class=\"item-text align-center mbr-text mbr-semibold mbr-fonts-style \" mbr-theme-style=\"display-6\" mbr-if=\"showItemText\" data-app-selector=\".item-text\"></p>\n                            </div>\n                        </div><div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center\" mbr-class=\"{'mbr-col-md-6 mbr-col-lg-12':itemsCount==1,\n                             'mbr-col-md-6 mbr-col-lg-6':itemsCount==2,\n                             'mbr-col-md-6 mbr-col-lg-4':itemsCount==3,\n                             'mbr-col-md-6 mbr-col-lg-3':itemsCount==4}\">\n                            <div class=\"card-img mbr-justify-content-center mbr-align-items-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <a href=\"https://www.instagram.com/maayanateva/\"><span mbr-icon class=\"mbr-iconfont fa-instagram fa\"></span></a>\n                                </div>\n                            </div>\n                            <div class=\"content\">\n                                <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-2\">אינסטגרם</h4> \n                                <p class=\"item-text align-center mbr-text mbr-semibold mbr-fonts-style \" mbr-theme-style=\"display-6\" mbr-if=\"showItemText\" data-app-selector=\".item-text\"></p>\n                            </div>\n                        </div><div class=\"list-item mbr-flex-column d-flex mbr-justify-content-center mbr-align-items-center\" mbr-class=\"{'mbr-col-md-6 mbr-col-lg-12':itemsCount==1,\n                             'mbr-col-md-6 mbr-col-lg-6':itemsCount==2,\n                             'mbr-col-md-6 mbr-col-lg-4':itemsCount==3,\n                             'mbr-col-md-6 mbr-col-lg-3':itemsCount==4}\">\n                            <div class=\"card-img mbr-justify-content-center mbr-align-items-center\" mbr-if=\"showIcons\">\n                                <div class=\"icon-wrap\">\n                                    <a href=\"https://www.facebook.com/maayanchuk\"><span mbr-icon class=\"mbr-iconfont fa-facebook-square fa\"></span></a>\n                                </div>\n                            </div>\n                            <div class=\"content\">\n                                <h4 class=\"item-title align-center mbr-fonts-style mbr-black mbr-bold\" data-app-selector=\".item-title\" mbr-if=\"showItemTitle\" mbr-theme-style=\"display-2\">פייסבוק</h4> \n                                <p class=\"item-text align-center mbr-text mbr-semibold mbr-fonts-style \" mbr-theme-style=\"display-6\" mbr-if=\"showItemText\" data-app-selector=\".item-text\"></p>\n                            </div>\n                        </div></div>\n                </div>\n            </div>      \n        </div>\n    </div>\n</section>",
+          "_cid": "qXFbgMrsQT",
+          "_anchor": "features8-75",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
